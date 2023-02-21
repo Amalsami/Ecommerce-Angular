@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './Component/home/home.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselComponent } from './Component/carousel/carousel.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { NavBarComponent } from './Shared/nav-bar/nav-bar.component';
 import { AboutAsComponent } from './Component/about-us/about-as.component';

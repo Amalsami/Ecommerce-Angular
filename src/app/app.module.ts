@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +14,9 @@ import { CartComponent } from './Component/cart/cart.component';
 import { SliderComponent } from './Component/slider/slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FilterComponent } from './Component/filter/filter/filter.component';
+import { FilteredComponent } from './Component/filtered/filtered.component';
+import { ProductComponent } from './Component/product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     CarouselComponent,
     NavBarComponent,
-    SliderComponent
+    SliderComponent,
+    FilterComponent,
+    FilteredComponent,
+    AboutAsComponent,
+    AccountComponent,
+    CartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

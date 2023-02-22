@@ -15,6 +15,10 @@ import { CartComponent } from './Component/cart/cart.component';
 import { SliderComponent } from './Component/slider/slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CategoryCardComponent } from './Component/category-card/category-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     CarouselComponent,
     NavBarComponent,
-    SliderComponent
+    SliderComponent,
+    AboutAsComponent,
+    AccountComponent,
+    CartComponent,
+    CategoryCardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     NgImageSliderModule,
     NgbModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    MatCardModule,
+    MatToolbarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,10 +14,14 @@ import { CartComponent } from './Component/cart/cart.component';
 import { SliderComponent } from './Component/slider/slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FilterComponent } from './Component/filter/filter/filter.component';
 import { FilteredComponent } from './Component/filtered/filtered.component';
 import { ProductComponent } from './Component/product/product.component';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import { FormsModule } from '@angular/forms';
     CarouselComponent,
     NavBarComponent,
     SliderComponent,
+    AboutAsComponent,
+    AccountComponent,
+    CartComponent,
     FilterComponent,
     FilteredComponent,
     AboutAsComponent,

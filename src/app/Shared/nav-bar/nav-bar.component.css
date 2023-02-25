@@ -4,14 +4,17 @@ a{
     text-decoration: none;
     color: rgb(248, 247, 246);
 }
+a:hover{
+  color: #6983a8;
+}
 .nav{
    height: 10%;
     background-color: rgb(4, 4, 4);
     display: flex;
-  
+
 }
 img {
-    
+
     height: 45px;
     width: 100px;
     background-color: black;

@@ -1,8 +1,18 @@
-#con{
-  padding-right: 5%;
-  padding-left: 5%;
+.container{
+  padding-top: 5rem;
 }
-#b{
-  align-items: center;
-  width: 100px;
+.btn{
+  /* background-color: none !important; */
+  color: #344e74;
+  border: none !important;
+  font-size: larger;
+  margin: 4px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 10rem;
+  height: 3rem;
 }
+/* .btn:hover{
+  background-color:#505f74 !important;
+
+} */

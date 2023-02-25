@@ -1,1 +1,17 @@
-<p>filtered works!</p>
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col shadow" *ngFor="let i of menuitems">
+      <div class="card shadow"  >
+        <img src="../../../assets/images/4.jpeg" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <div class="card-body">
+          <h1 class="card-text">{{i.name}}</h1>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="item-price"><b>{{i.price}}</b></p>
+          <button type="button" class="btn btn-lg btn-outline-light" (click)="addItem(item)">view details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+

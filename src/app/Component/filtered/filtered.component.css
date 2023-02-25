@@ -1,0 +1,16 @@
+
+.row{
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.btn{
+  align-items: center;
+  width: 100px;
+  background-color: #6983a8 !important;
+}
+.col{
+  padding-right: 1rem;
+}
+.col:hover{
+  border: #6983a8 solid 1px;
+}

@@ -9,6 +9,7 @@ import { CartComponent } from './Component/cart/cart.component';
 const routes: Routes = [
 
   {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'aboutus',component:AboutAsComponent},
   {path:'account',component:AccountComponent},
   {path:'product',component:ProductComponent},

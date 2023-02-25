@@ -17,10 +17,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import { MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FilterComponent } from './Component/filter/filter/filter.component';
 import { FilteredComponent } from './Component/filtered/filtered.component';
 import { ProductComponent } from './Component/product/product.component';
 import { FormsModule } from '@angular/forms';
+import { SingleProductComponent } from './Component/single-product/single-product.component';
 
 
 @NgModule({
@@ -34,12 +34,12 @@ import { FormsModule } from '@angular/forms';
     AboutAsComponent,
     AccountComponent,
     CartComponent,
-    FilterComponent,
     FilteredComponent,
     AboutAsComponent,
     AccountComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    SingleProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,10 @@ import { FormsModule } from '@angular/forms';
     NgImageSliderModule,
     NgbModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

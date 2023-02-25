@@ -11,6 +11,6 @@
 .col{
   padding-right: 1rem;
 }
-.col:hover{
+.card:hover{
   border: #6983a8 solid 1px;
 }

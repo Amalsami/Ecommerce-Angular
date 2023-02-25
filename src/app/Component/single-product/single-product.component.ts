@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'
+//import { DemoService } from 'src/app/Core/Services/demo.service.ts';
+import { DemoService } from 'src/app/core/Services/demo.service'
+
 
 @Component({
   selector: 'app-single-product',
@@ -6,5 +10,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./single-product.component.css']
 })
 export class SingleProductComponent {
+  products:any;
+   ID=0;
+   constructor(myService:DemoService,myActiviivated:ActivatedRoute){
+    this.ID=myActiviivated.snapshot.params["id"];
+    myService.GetUserByID(this.ID).subscribe(
+      {
+        next:(data)=>{
+          this.products=data;
+        },
+        error:(err)=>{console.log(err)}
+        
+      }
+    )
+   }
 
 }

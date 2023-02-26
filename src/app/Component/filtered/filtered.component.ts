@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DemoService } from 'src/app/Core/Services/demo.service';
+import { DemoService } from 'src/app/core/Services/demo.service';
 @Component({
   selector: 'app-filtered',
   templateUrl: './filtered.component.html',
@@ -7,12 +7,12 @@ import { DemoService } from 'src/app/Core/Services/demo.service';
 })
 export class FilteredComponent {
   // ngOnChanges(): void {
-
+ products:any;
   // }
   // item:any=""
   // menuitems:any[]=[]
   // @Input() searhed:string=''
-  products:any;
+ 
   // images:any=["https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
   // "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
   // "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",

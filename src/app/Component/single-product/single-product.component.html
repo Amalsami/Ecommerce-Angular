@@ -1,1 +1,11 @@
-<p>single-product works!</p>
+<div class="card   mb-3" style="max-width: 80rem; text-align: center; margin: auto; margin-top:3%; background-color: rgba(157, 156, 156, 0.648);">
+    <div class="card-header">{{products.category}}</div>
+    <div class="card-body">
+    
+      <img src={{products.image}} class="bd-placeholder-img card-img-top" width="60%" height="300" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="card-body">
+        <h1 class="card-title">{{products.title}}</h1>
+        <h4 class="oard-text" style="max-width: 100%; text-align:start; ">{{products.description}}</h4>
+        <p class="item-price"><b>price:{{products.price}}</b></p>
+        <button type="button" style="background-color: rgb(23, 23, 23); " class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
+    </div></div>

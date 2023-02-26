@@ -21,6 +21,7 @@ import { FilteredComponent } from './Component/filtered/filtered.component';
 import { ProductComponent } from './Component/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { SingleProductComponent } from './Component/single-product/single-product.component';
+import { FilterToPoductComponent } from './Component/filter-to-poduct/filter-to-poduct.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { SingleProductComponent } from './Component/single-product/single-produc
     CartComponent,
     ProductComponent,
     SingleProductComponent,
+    FilterToPoductComponent,
   ],
   imports: [
     BrowserModule,

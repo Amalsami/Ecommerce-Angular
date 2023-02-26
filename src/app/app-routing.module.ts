@@ -6,6 +6,7 @@ import { AccountComponent } from './Component/account/account.component';
 import { ProductComponent } from './Component/product/product.component';
 import { CartComponent } from './Component/cart/cart.component';
 import { SingleProductComponent } from './Component/single-product/single-product.component';
+import { FilteredComponent } from './Component/filtered/filtered.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,8 @@ const routes: Routes = [
   {path:'account',component:AccountComponent},
   {path:'product',component:ProductComponent},
   {path:'Cart',component:CartComponent},
+  {path:'filter/:anywored',component:FilteredComponent},
+  {path:'SingleProductComponent',component:SingleProductComponent},
   {path:'singleProduct/:id',component:SingleProductComponent},];
 
 @NgModule({

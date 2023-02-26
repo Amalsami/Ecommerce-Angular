@@ -1,22 +1,34 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DemoService } from 'src/app/Core/Services/demo.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
-  ngOnInit(): void {
-
-  }
-
+export class ProductComponent {
+//   products:any[]=[];
+//   Filteredproducts=new Array();
+//   constructor(private productsService:DemoService) {
+//     this.products= productsService.GetAllProduct
+//     this.Filteredproducts=this.products;
+// }
   search:any=''
   filtersearch:any=''
-  select: string = '';
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.filtersearch= this.search.filter((search:any) => this.search.Name.toLowerCase().includes(filterValue.toLowerCase())) ;
+  select: string = '';//search
+  cards:any[]=["all"]//button
+  // menuCards= this.productservice.URL_DB
+  filterByCategory(chip:any){
+    // if (chip === "All") {
+    //   this.filtersearch = this.menueitems;
+    // }else
+    // this.FilteriedMenu = this.menueItems.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
   }
+
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.filtersearch= this.search.filter((search:any) => this.search.Name.toLowerCase().includes(filterValue.toLowerCase())) ;
+  // }
   //  @Output() select:any=0;
 
   // filtereditem:any []=[]

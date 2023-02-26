@@ -14,6 +14,7 @@ export class CarouselComponent {
     myService.GetAllProduct().subscribe(
       {
         next: (data) => {
+
           this.products = data;
           console.log(this.products)
         },

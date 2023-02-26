@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DemoService } from 'src/app/Core/Services/demo.service';
+import { DemoService } from 'src/app/core/Services/demo.service';
+// import { DemoService } from 'src/app/Core/Services/demo.service';
 @Component({
   selector: 'app-filtered',
   templateUrl: './filtered.component.html',

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DemoService } from 'src/app/Core/Services/demo.service';
+// import { DemoService } from 'src/app/Core/Services/demo.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',

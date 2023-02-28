@@ -10,13 +10,13 @@
         <div class="card-body">
           <h1 class="card-text">{{i.name}}</h1>
          
-          <h1 class="card-text">{{i.title}}</h1>
-          <p class="card-text">{{i.category}}</p>
-          <p class="item-price"><b>{{i.price}}</b></p>
+          <h1 class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.title}}</h1>
+          <p class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.description}}</p>
+          <p class="item-price"><b>{{i.price}}$</b></p>
  
           
          
           <!--  (click)="addItem(item)" -->
-        </div></a> <button type="button" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
+        </div></a> <button (click)="addToCart(i)" type="button" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
       </div> 
     </div>

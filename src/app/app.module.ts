@@ -21,6 +21,8 @@ import { FilteredComponent } from './Component/filtered/filtered.component';
 import { ProductComponent } from './Component/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { SingleProductComponent } from './Component/single-product/single-product.component';
+import {MatIconModule} from '@angular/material/icon';
+import { BestSellerComponent } from './Component/best-seller/best-seller.component';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { SingleProductComponent } from './Component/single-product/single-produc
     CartComponent,
     ProductComponent,
     SingleProductComponent,
+    BestSellerComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { SingleProductComponent } from './Component/single-product/single-produc
     FormsModule,
     HttpClientModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,3 +28,30 @@
     padding: 12px 72px;
     border-radius: 3px !important;
 }
+.button {
+    background-color: #607EAA; /* Green */
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .button2 {
+    background-color: #1C3879; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 1px 24px;
+    border-radius: 20%;
+    width: 100%;
+  }

@@ -1,14 +1,15 @@
-import { Component, Input ,AfterContentInit, ContentChildren, ViewChild, QueryList, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { CartService } from 'src/app/Core/Services/cart.service';
 import { DemoService } from 'src/app/Core/Services/demo.service';
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css']
+  selector: 'app-best-seller',
+  templateUrl: './best-seller.component.html',
+  styleUrls: ['./best-seller.component.css']
 })
-export class CarouselComponent {
+export class BestSellerComponent {
   products: any;
+
 
   constructor(private myService:DemoService,private cartservice:CartService){}
   ngOnInit():void{
@@ -23,5 +24,4 @@ export class CarouselComponent {
   addToCart(item:any){
     this.cartservice.addToCart(item);
     }
-  
 }

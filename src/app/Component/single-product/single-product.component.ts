@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import { DemoService } from 'src/app/Core/Services/demo.service';
-import{CartService}from'src/app/Core/Services/cart.service'
+import { CartService } from 'src/app/Core/Services/cart.service';
+
 //import { DemoService } from 'src/app/Core/Services/demo.service.ts';
 
 

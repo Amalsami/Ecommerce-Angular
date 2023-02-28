@@ -23,6 +23,10 @@ import { FormsModule } from '@angular/forms';
 import { SingleProductComponent } from './Component/single-product/single-product.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BestSellerComponent } from './Component/best-seller/best-seller.component';
+import { FilterToPoductComponent } from './Component/filter-to-poduct/filter-to-poduct.component';
+import { ExploreAreaComponent } from './Component/explore-area/explore-area.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -43,6 +47,8 @@ import { BestSellerComponent } from './Component/best-seller/best-seller.compone
     ProductComponent,
     SingleProductComponent,
     BestSellerComponent,
+    FilterToPoductComponent,
+    ExploreAreaComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,9 @@ import { BestSellerComponent } from './Component/best-seller/best-seller.compone
     HttpClientModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

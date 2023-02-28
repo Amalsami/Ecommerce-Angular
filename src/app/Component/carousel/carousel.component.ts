@@ -1,6 +1,6 @@
 import { Component, Input ,AfterContentInit, ContentChildren, ViewChild, QueryList, ElementRef } from '@angular/core';
-import { CartService } from 'src/app/Core/Services/cart.service';
 import { DemoService } from 'src/app/Core/Services/demo.service';
+import { CartService } from 'src/app/Core/Services/cart.service';
 
 @Component({
   selector: 'app-carousel',

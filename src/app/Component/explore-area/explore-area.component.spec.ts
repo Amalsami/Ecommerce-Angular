@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingleProductComponent } from './single-product.component';
+import { ExploreAreaComponent } from './explore-area.component';
 
-describe('SingleProductComponent', () => {
-  let component: SingleProductComponent;
-  let fixture: ComponentFixture<SingleProductComponent>;
+describe('ExploreAreaComponent', () => {
+  let component: ExploreAreaComponent;
+  let fixture: ComponentFixture<ExploreAreaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SingleProductComponent ]
+      declarations: [ ExploreAreaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SingleProductComponent);
+    fixture = TestBed.createComponent(ExploreAreaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

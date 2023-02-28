@@ -1,30 +1,49 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {ActivatedRoute} from '@angular/router'
-//import { DemoService } from 'src/app/Core/Services/demo.service.ts';
-import { DemoService } from 'src/app/core/Services/demo.service'
+import{CartService}from'src/app/core/Services/cart.service'
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
-  protected:any[]=[];
-  constructor(private myService:DemoService,myActiviivated:ActivatedRoute){}
-  ngOnInit():void
-  { 
-  
-  }
+export class ProductComponent {
 
 
-  search:any=''
+  public searchterm:string='';
+
+  constructor(private CartService:CartService){}
+
+search(event:any)
+{
+  this.searchterm=(event.target as HTMLInputElement).value;
+  console.log(this.searchterm);
+  this.CartService.search.next(this.searchterm);
+}
+
+
+//   products:any[]=[];
+//   Filteredproducts=new Array();
+//   constructor(private productsService:DemoService) {
+//     this.products= productsService.GetAllProduct
+//     this.Filteredproducts=this.products;
+// }
+  //search:any=''
   filtersearch:any=''
-  select: string = '';
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-
-    this.filtersearch= this.search.filter((search:any) => this.search.Name.toLowerCase().includes(filterValue.toLowerCase())) ;
+  select: string = '';//search
+  cards:any[]=["all"]//button
+  // menuCards= this.productservice.URL_DB
+  filterByCategory(chip:any){
+    // if (chip === "All") {
+    //   this.filtersearch = this.menueitems;
+    // }else
+    // this.FilteriedMenu = this.menueItems.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
   }
+
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.filtersearch= this.search.filter((search:any) => this.search.Name.toLowerCase().includes(filterValue.toLowerCase())) ;
+  // }
   //  @Output() select:any=0;
 
   // filtereditem:any []=[]
@@ -32,32 +51,11 @@ export class ProductComponent implements OnInit {
   // catbyid:any=0
   /**
    *
-   */ 
-  // keywored:string;
-  // constructor(myService:DemoService,myActiviivated:ActivatedRoute){
-  //  this.keywored=myActiviivated.snapshot.params["keywored"];
-  //  myService.GetproductbyCategeries(this.keywored).subscribe(
-  //    {
-  //      next:(data)=>{
-  //        this.protected=data;
-  //      },
-  //      error:(err)=>{console.log(err)}
-       
-  //    }
-  //  )
-  // }
+   */
 
   // selected(){
   //  this.filtereditem= this.menuitems.filter(pr=>pr.category==this.catbyid)
   // }
 
-  
-  // GetproductCategeries(keywored:string){
-  //   this.myService.GetproductbyCategeries(keywored).subscribe((res:any)=>{
-  // this.protected=res
-  //   })
-  // }
 
- 
-  
 }

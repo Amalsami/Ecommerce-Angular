@@ -1,0 +1,117 @@
+<div class="my-2 w-25">
+    <label for="" class="my-1">Categeriest:</label>
+    <select class="form-control" >
+      
+        <option value="all" selected>all</option>
+        <option value="{{option}}" *ngFor="let option of categeoies "routerLinkActive="active" routerLink="/" > 
+            
+            {{option}} </option>
+     
+       
+    </select>
+</div>
+<!-- <div class="my-2 w-25">
+    <label for="" class="my-1">Categeriest:</label>
+    <button class="form-control" >
+      
+        <button value="all" selected>all</button>
+        <button value="{{option}}" *ngFor="let option of categeoies "routerLinkActive="active" [routerLink]="['/product',option] "> 
+            
+            {{option}} </button>
+     
+       
+    </button>
+</div> -->
+
+<!-- <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+     
+      <div class="col"  *ngFor="let i of productList ">
+        
+        <div class="card shadow"  >
+          <a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',i.id]">
+          <img src={{i.image}} class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <div class="card-body">
+            <h1 class="card-text">{{i.name}}</h1>
+            <h1 class="card-text">{{i.title}}</h1>
+            <p class="card-text">{{i.category}}</p>
+            <p class="item-price"><b>{{i.price}}</b></p>
+          </div></a> <button type="button" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
+        </div> 
+      </div>
+
+
+<br> -->
+
+
+
+      <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+
+    <div class="col-lg-6">
+        <div class="right-content">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="first-image">
+                        <a (click)=" filter('')">
+                        <img src="assets/images/1a.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="first-image">
+                        <a (click)=" filter('electronics')">
+                        <img src="assets/images/apple.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="first-image">
+                        <a (click)=" filter('fashion')">
+                        <img src="assets/images/asus.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="first-image">
+                        <a (click)=" filter('jewelery')">
+                        <img src="assets/images/bbm.png" alt=""></a>
+                    </div>
+                </div>
+              
+                <div class="col-lg-2">
+                    <div class="first-image">
+                        <a (click)=" filter('')">
+                        <img src="assets/images/2a.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    </section>
+    
+    
+    <div class="container" >
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+         
+          <div class="col"  *ngFor="let i of filterCategory " >
+            
+            <div class="card shadow"  >
+              <a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',i.id]">
+              <img src={{i.image}} class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <div class="card-body">
+                <h1 class="card-text">{{i.name}}</h1>
+               
+                <h1 class="card-text">{{i.title}}</h1>
+                <p class="card-text">{{i.category}}</p>
+                <p class="item-price"><b>{{i.price}}</b></p>
+       
+                
+               
+                (click)="addItem(item)" -->
+              </div></a> <button type="button" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
+            </div> 
+          </div> 
+   

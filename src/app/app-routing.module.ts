@@ -11,11 +11,12 @@ import { FilteredComponent } from './Component/filtered/filtered.component';
 const routes: Routes = [
 
   {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'aboutus',component:AboutAsComponent},
   {path:'account',component:AccountComponent},
   {path:'product',component:ProductComponent},
   {path:'Cart',component:CartComponent},
-  {path:'filter/:anywored',component:FilteredComponent},
+  {path:'filter',component:FilteredComponent},
   {path:'SingleProductComponent',component:SingleProductComponent},
   {path:'singleProduct/:id',component:SingleProductComponent},];
 

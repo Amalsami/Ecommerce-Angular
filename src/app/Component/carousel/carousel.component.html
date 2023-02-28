@@ -18,9 +18,11 @@
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i<4">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.image}} class="img-responsive" alt="">									
 								</div>
+							</a>
 								<div class="thumb-content">
 									<h4>Apple iPad</h4>									
 									<div class="star-rating">
@@ -45,9 +47,11 @@
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i>=4&&i<8">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.image}} class="img-responsive" alt="">
 								</div>
+								</a>
 								<div class="thumb-content">
 									<h4>Sony Play Station</h4>
 									<p class="item-price"><s>$289.00</s> <span>$269.00</span></p>
@@ -71,9 +75,11 @@
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper" *ngIf="i>=8&&i<12">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.image}} class="img-responsive" alt="">
 								</div>
+								</a>
 								<div class="thumb-content">
 									<h4>Apple iPhone</h4>
 									<p class="item-price"><s>$369.00</s> <span>$349.00</span></p>
@@ -97,9 +103,11 @@
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper" *ngIf="i>=12&&i<16">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.image}} class="img-responsive" alt="">
 								</div>
+								</a>
 								<div class="thumb-content">
 									<h4>Apple iPhone</h4>
 									<p class="item-price"><s>$369.00</s> <span>$349.00</span></p>
@@ -123,9 +131,11 @@
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper" *ngIf="i>=16&&i<20">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.image}} class="img-responsive" alt="">
 								</div>
+							</a>
 								<div class="thumb-content">
 									<h4>Apple iPhone</h4>
 									<p class="item-price"><s>$369.00</s> <span>$349.00</span></p>

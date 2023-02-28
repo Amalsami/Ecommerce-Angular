@@ -1,16 +1,19 @@
-
-.row{
-  padding-right: 5%;
-  padding-left: 5%;
-}
-.btn{
+.btn {
   align-items: center;
   width: 100px;
   background-color: #6983a8 !important;
 }
-.col{
-  padding-right: 1rem;
+
+.col {
+  padding: 1rem;
+  /* width: 30rem;
+  height:40rem ; */
 }
-.card:hover{
+
+.card:hover {
   border: #6983a8 solid 1px;
+}
+
+h2 {
+  font-size: large;
 }

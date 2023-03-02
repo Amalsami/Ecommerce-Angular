@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DemoService } from 'src/app/Core/Services/demo.service';
 import{CartService}from'src/app/Core/Services/cart.service'
 
@@ -13,6 +13,8 @@ export class FilteredComponent {
  // categeoies:any[]=[];
  public productList:any;
  public filterCategory:any;
+ @Input() items= [];
+ @Input() term:string ='';
 
 
 
@@ -45,18 +47,18 @@ this.productList.forEach((a:any)=>{
       }
     })
   }
-  
+
   //products:any[]=[];
  // categegies:any;
-  
- 
+
+
   // ngOnChanges(): void {
  products:any;
   // }
   // item:any=""
   // menuitems:any[]=[]
   // @Input() searhed:string=''
- 
+
   // images:any=["https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
   // "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
   // "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
@@ -84,6 +86,6 @@ this.productList.forEach((a:any)=>{
   //       }
   //     )
   // }
- 
+
 
 }

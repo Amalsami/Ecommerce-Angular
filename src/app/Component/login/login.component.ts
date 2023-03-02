@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators ,FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginComponent {
 
 
 
-
+  constructor( private router:Router){}
 
 loginform =new FormGroup({
 
@@ -33,7 +34,9 @@ get passwordValid(){
   return this.loginform.controls["password" ].valid;
 }
 
-
+goToSignup(){
+  this.router.navigate(["/signup"])
+}
 
 Submit(){
 

@@ -1,11 +1,11 @@
 a{
     margin-left: 10px;
     margin-right: 10px;
-    text-decoration: none;
+    font-size: larger;
     color: rgb(248, 247, 246);
 }
 a:hover{
-  color: #6983a8;
+  color: #415b80;
 }
 .nav{
    height: 10%;
@@ -23,4 +23,7 @@ img {
 
 .nn{
     margin-right: 60%;
+}
+.nav{
+  background-color: #6983a8;
 }

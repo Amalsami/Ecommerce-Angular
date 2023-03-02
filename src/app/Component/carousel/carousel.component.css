@@ -42,7 +42,7 @@ h2::after {
 	width: 100%;
 	position: relative;
 }
-.carousel .item img {	
+.carousel .item img {
 	max-width: 100%;
 	max-height: 100%;
 	display: inline-block;
@@ -83,7 +83,7 @@ h2::after {
 .carousel .carousel-control {
 	height: 44px;
 	width: 40px;
-	background: #7ac400;	
+	background: #7ac400;
     margin: auto 0;
     border-radius: 4px;
 	opacity: 0.8;
@@ -129,10 +129,10 @@ h2::after {
 	border-radius: 50%;
 	border: none;
 }
-.carousel-indicators li {	
+.carousel-indicators li {
 	background: rgba(0, 0, 0, 0.2);
 }
-.carousel-indicators li.active {	
+.carousel-indicators li.active {
 	background: rgba(0, 0, 0, 0.6);
 }
 .carousel .wish-icon {

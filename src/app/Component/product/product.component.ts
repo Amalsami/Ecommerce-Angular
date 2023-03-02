@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import{CartService}from'src/app/Core/Services/cart.service'
+import { DemoService } from 'src/app/Core/Services/demo.service';
 
 @Component({
   selector: 'app-product',
@@ -10,34 +11,26 @@ import{CartService}from'src/app/Core/Services/cart.service'
 export class ProductComponent {
 
 
-  public searchterm:string='';
-
-  constructor(private CartService:CartService){}
-
-search(event:any)
-{
-  this.searchterm=(event.target as HTMLInputElement).value;
-  console.log(this.searchterm);
-  this.CartService.search.next(this.searchterm);
-}
 
 
-//   products:any[]=[];
-//   Filteredproducts=new Array();
-//   constructor(private productsService:DemoService) {
-//     this.products= productsService.GetAllProduct
-//     this.Filteredproducts=this.products;
+  constructor(private demoService:DemoService){}
+
+// search(event:any)
+// {
+//   this.searchterm=(event.target as HTMLInputElement).value;
+//   console.log(this.searchterm);
+//   this.CartService.search.next(this.searchterm);
 // }
-  //search:any=''
-  filtersearch:any=''
+  searchterm:string='';
+  filtersearch:any=[];
   select: string = '';//search
   cards:any[]=["all"]//button
-  // menuCards= this.productservice.URL_DB
-  filterByCategory(chip:any){
-    // if (chip === "All") {
-    //   this.filtersearch = this.menueitems;
+  menuCards= this.demoService.GetAllProduct
+  filterByCategory(card:any){
+    // if (card === "All") {
+    //   this.filtersearch = this.menuCards;
     // }else
-    // this.FilteriedMenu = this.menueItems.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
+    // this.filtersearch = this.menuCards.filter(item => item.category.toLocaleLowerCase().includes(card.toLocaleLowerCase()));
   }
 
   // applyFilter(event: Event) {

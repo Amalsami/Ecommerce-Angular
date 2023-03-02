@@ -5,9 +5,9 @@
     align-items: center;
   }
 .main{
-	width: 600%;
+	width: 550px;
 	height: 550px;
-	background: linear-gradient(to bottom, #12223b,  #1c3879);
+	background: linear-gradient(to bottom, #6983A8,  #1c3879);
 	overflow: hidden;
 	
 	border-radius: 10px;
@@ -64,10 +64,10 @@ button{
 button:hover{
 	background: black;
 }
-.login{
+/* .login{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
-}
+} */

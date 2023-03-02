@@ -7,7 +7,7 @@
 .main{
 	width: 550px;
 	height: 600px;
-	background: linear-gradient(to bottom, #12223b,  #1c3879);
+	background: linear-gradient(to bottom, #6983A8,  #1c3879);
 	overflow: hidden;
 	
 	border-radius: 10px;
@@ -43,6 +43,8 @@ input{
 	border: none;
 	outline: none;
 	border-radius: 5px;
+    text-align: center;
+    font-weight: bolder;
 }
 button{
 	width: 60%;

@@ -10,7 +10,7 @@ export class DemoService {
   private URL_DB = "https://fakestoreapi.com/products";
   private URL_DB2 ="https://fakestoreapi.com/products/categories";
   private URL_DB3 ="https://fakestoreapi.com/products/category"
-  
+
   constructor(private myClient:HttpClient) { }
   GetAllProduct(){
     return this.myClient.get<any>("https://fakestoreapi.com/products")

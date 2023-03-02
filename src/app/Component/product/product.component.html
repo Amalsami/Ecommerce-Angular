@@ -1,11 +1,13 @@
 
 <div class="container">
   <div  class="row">
-      <input [(ngModel)]="searchterm" (keyup)="search($event)" type="text" placeholder="Search" class="form-control w-50 m-auto"/>
+      <input [(ngModel)]="searchterm" type="text" placeholder="Search" class="form-control w-50 m-auto"/>
   </div>
   <div class=" w-25 d-flex justify-content-around m-auto my-5">
-      <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">all products</button>
+      <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">all</button>
+      <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">accsesories</button> -->
   </div>
 </div>
-<app-filtered></app-filtered>
+<!-- [items]="FilteriedMenu" -->
+<app-filtered class="mt-5"  [term]="searchterm" ></app-filtered>
 

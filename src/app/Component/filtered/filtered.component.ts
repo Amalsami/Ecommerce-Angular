@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DemoService } from 'src/app/Core/Services/demo.service';
 import{CartService}from'src/app/Core/Services/cart.service'
 
@@ -13,6 +13,8 @@ export class FilteredComponent {
  // categeoies:any[]=[];
  public productList:any;
  public filterCategory:any;
+ @Input() items= [];
+ @Input() term:string ='';
 
 
 

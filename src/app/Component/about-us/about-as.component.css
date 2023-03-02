@@ -3,9 +3,12 @@
   height: 40rem;
 
 }
+h1{
+  color: #588acf;
+}
 .h{
   text-align: center;
-  color: #6983a8;
+  color: #588acf;
   font-size: 50px;
   margin-top: 8rem;
   margin-bottom: 5rem;
@@ -16,6 +19,9 @@
 }
 .col{
   padding: 1rem;
+}
+.card:hover{
+  border: #588acf solid 1px;
 }
 #con{
   padding-right: 10%;

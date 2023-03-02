@@ -1,19 +1,34 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DemoService } from 'src/app/Core/Services/demo.service';
+import{CartService}from'src/app/Core/Services/cart.service'
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
+
+
+  public searchterm:string='';
+
+  constructor(private CartService:CartService){}
+
+search(event:any)
+{
+  this.searchterm=(event.target as HTMLInputElement).value;
+  console.log(this.searchterm);
+  this.CartService.search.next(this.searchterm);
+}
+
+
 //   products:any[]=[];
 //   Filteredproducts=new Array();
 //   constructor(private productsService:DemoService) {
 //     this.products= productsService.GetAllProduct
 //     this.Filteredproducts=this.products;
 // }
-  search:any=''
+  //search:any=''
   filtersearch:any=''
   select: string = '';//search
   cards:any[]=["all"]//button

@@ -1,12 +1,12 @@
-  .container{
+.container{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 .main{
-	width: 550px;
-	height: 600px;
+	width: 600%;
+	height: 550px;
 	background: linear-gradient(to bottom, #12223b,  #1c3879);
 	overflow: hidden;
 	
@@ -27,7 +27,7 @@ label{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 65px;
+	margin: 80px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
@@ -38,7 +38,7 @@ input{
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
-	margin: 30px auto;
+	margin: 20px auto;
 	padding: 10px;
 	border: none;
 	outline: none;
@@ -64,10 +64,10 @@ button{
 button:hover{
 	background: black;
 }
-/* .login{
+.login{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
-} */
+}

@@ -21,7 +21,14 @@ import { FilteredComponent } from './Component/filtered/filtered.component';
 import { ProductComponent } from './Component/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { SingleProductComponent } from './Component/single-product/single-product.component';
+import {MatIconModule} from '@angular/material/icon';
+import { BestSellerComponent } from './Component/best-seller/best-seller.component';
+import { FilterToPoductComponent } from './Component/filter-to-poduct/filter-to-poduct.component';
+import { ExploreAreaComponent } from './Component/explore-area/explore-area.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './Component/signup/signup.component';
+import { LoginComponent } from './Component/login/login.component';
+
 
 
 @NgModule({
@@ -41,7 +48,11 @@ import { SignupComponent } from './Component/signup/signup.component';
     CartComponent,
     ProductComponent,
     SingleProductComponent,
+    BestSellerComponent,
+    FilterToPoductComponent,
+    ExploreAreaComponent,
     SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +64,9 @@ import { SignupComponent } from './Component/signup/signup.component';
     FormsModule,
     HttpClientModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    ReactiveFormsModule,
     MatToolbarModule
   ],
   providers: [],

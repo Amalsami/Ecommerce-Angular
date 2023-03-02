@@ -1,4 +1,4 @@
-<div class="card   mb-3" style="max-width: 80rem; text-align: center; margin: auto; margin-top:3%; background-color: rgba(157, 156, 156, 0.648);">
+<!-- <div class="card   mb-3" style="max-width: 80rem; text-align: center; margin: auto; margin-top:3%; background-color: rgb(255, 255, 255);">
     <div class="card-header">{{products.category}}</div>
     <div class="card-body">
     
@@ -8,4 +8,123 @@
         <h4 class="oard-text" style="max-width: 100%; text-align:start; ">{{products.description}}</h4>
         <p class="item-price"><b>price:{{products.price}}</b></p>
         <button type="button" style="background-color: rgb(23, 23, 23); " class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
-    </div></div>
+    </div></div>  -->
+
+    <section class="page-header">
+      <div class="overly "></div>   
+      <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded " style="background-color:rgba(255, 255, 255, 0);">
+        <div class="row justify-content-center ">
+          <div class="col-lg-6">
+            <div class="content text-center ">
+              <h1 class="mb-3">Product Single</h1>
+              <p>{{products.title}}</p>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="single-product-slider">
+              <div class="carousel slide" data-ride="carousel" id="single-product-slider">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src={{products.image}} alt="" class="img-fluid" style="height: 450px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src={{products.image}} alt="" class="img-fluid">
+                  </div>
+                  <div class="carousel-item ">
+                    <img src={{products.image}} alt="" class="img-fluid">
+                  </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#single-product-slider" data-slide-to="0" class="active">
+                      <img src={{products.image}} alt="" class="img-fluid">
+                    </li>
+                    <li data-target="#single-product-slider" data-slide-to="1">
+                      <img src={{products.image}}  alt="" class="img-fluid">
+                    </li>
+                    <li data-target="#single-product-slider" data-slide-to="2">
+                      <img src={{products.image}} alt="" class="img-fluid">
+                    </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-7 shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="background-color:#f9f5eb53;">
+            <div class="single-product-details mt-5 mt-lg-0">
+              <h2>{{products.title}}</h2>
+              <div class="sku_wrapper mb-4">
+               brand: <span class="text-muted">{{products.category}}</span>
+              </div>
+              <hr>
+              
+              <h3 class="product-price">{{products.price}}<del>{{products.price}}</del></h3>
+              
+              <p class="product-description my-4 ">
+                {{products.description}}
+              </p>
+              <form class="cart" action="#" method="post">
+                <div class="quantity d-flex align-items-center">
+                  <!-- <input type="number" id="#" class="input-text qty text form-control w-25 mr-3" step="1" min="1" max="9" name="quantity" value="1" title="Qty" size="4" > -->
+                  <a href="#" class="btn btn-main btn-small" style="background-color: rgb(23, 23, 23); width: 200px;" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">Add to cart</a>
+                </div>
+              </form>
+              
+              <!-- <div class="color-swatches mt-4 d-flex align-items-center">
+                <span class="font-weight-bold text-capitalize product-meta-title">color:</span>
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a routerLink="/product-single" class="bg-info"></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a routerLink="/product-single" class="bg-dark"></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a routerLink="/product-single" class="bg-danger"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-size d-flex align-items-center mt-4">
+                <span class="font-weight-bold text-capitalize product-meta-title">Size:</span>
+                <select class="form-control">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+              </div> -->
+              <div class="products-meta mt-4">
+                <div class="product-category d-flex align-items-center">
+                  <span class="font-weight-bold text-capitalize product-meta-title">{{products.category}}</span>
+              
+                </div>
+                <div class="product-share mt-5">
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="tf-ion-social-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="tf-ion-social-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="tf-ion-social-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="tf-ion-social-pinterest"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </section>

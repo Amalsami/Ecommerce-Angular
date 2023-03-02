@@ -1,20 +1,19 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2><b>Offers</b></h2>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<h2><b>Best Seller</b></h2>
+			<div id="myCarousell" class="carousel slide" data-ride="carousel" data-interval="0">
 			<!-- Carousel indicators -->
 			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousell" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousell" data-slide-to="1"></li>
 			</ol>   
 			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner" >
 				<div class="item active" >
 					<div class="row" >
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
-							<div class="thumb-wrapper"*ngIf="i<4">
+							<div class="thumb-wrapper"*ngIf="i>=12&&i<16">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
@@ -43,7 +42,7 @@
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
-							<div class="thumb-wrapper"*ngIf="i>=4&&i<8">
+							<div class="thumb-wrapper"*ngIf="i>=16&&i<20">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
@@ -68,40 +67,12 @@
 						</div>				
 					</div>
 				</div>
-				<div class="item">
-					<div class="row">
-						<div class="col-sm-3" *ngFor="let m of products;let i=index">
-							<div class="thumb-wrapper" *ngIf="i>=8&&i<12">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
-								<div class="img-box">
-									<img src={{m.image}} class="img-responsive" alt="">
-								</div>
-								</a>
-								<div class="thumb-content">
-									<h4>{{m.title}}</h4>
-									<p class="item-price"><s>$369.00</s> <span>${{m.price}}</span></p>
-									<div class="star-rating">
-										<ul class="list-inline">
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-										</ul>
-									</div>
-									<a href="#" class="btn btn-primary" (click)="addToCart(m)" >Add to Cart</a>
-								</div>						
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<!-- Carousel controls -->
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="background-color: #1C3879;">
+			<a class="carousel-control left" href="#myCarousell" data-slide="prev" style="background-color: #1C3879;">
 				<i class="fa fa-angle-left"></i>
 			</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next"style="background-color: #1C3879;">
+			<a class="carousel-control right" href="#myCarousell" data-slide="next"style="background-color: #1C3879;">
 				<i class="fa fa-angle-right"></i>
 			</a>
 		</div>

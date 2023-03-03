@@ -8,21 +8,21 @@
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>   
+			</ol>
 			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner" >
 				<div class="item active" >
 					<div class="row" >
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i<4">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
-									<img src={{m.image}} class="img-responsive" alt="">									
+									<img src={{m.photo}} class="img-responsive" alt="">
 								</div>
 							</a>
 								<div class="thumb-content">
-									<h4>{{m.title}}</h4>									
+									<h4>{{m.name}}</h4>
 									<div class="star-rating">
 										<ul class="list-inline">
 											<li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -34,24 +34,24 @@
 									</div>
 									<p class="item-price"><s>$400.00</s> <b>${{m.price}}</b></p>
 									<a href="#" class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
-								</div>						
+								</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i>=4&&i<8">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
-									<img src={{m.image}} class="img-responsive" alt="">
+									<img src={{m.photo}} class="img-responsive" alt="">
 								</div>
 								</a>
 								<div class="thumb-content">
-									<h4>{{m.title}}</h4>
+									<h4>{{m.name}}</h4>
 									<p class="item-price"><s>$289.00</s> <span>${{m.price}}</span></p>
 									<div class="star-rating">
 										<ul class="list-inline">
@@ -63,23 +63,23 @@
 										</ul>
 									</div>
 									<a href="#" class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
-								</div>						
+								</div>
 							</div>
-						</div>				
+						</div>
 					</div>
 				</div>
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper" *ngIf="i>=8&&i<12">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
-									<img src={{m.image}} class="img-responsive" alt="">
+									<img src={{m.photo}} class="img-responsive" alt="">
 								</div>
 								</a>
 								<div class="thumb-content">
-									<h4>{{m.title}}</h4>
+									<h4>{{m.name}}</h4>
 									<p class="item-price"><s>$369.00</s> <span>${{m.price}}</span></p>
 									<div class="star-rating">
 										<ul class="list-inline">
@@ -91,7 +91,7 @@
 										</ul>
 									</div>
 									<a href="#" class="btn btn-primary" (click)="addToCart(m)" >Add to Cart</a>
-								</div>						
+								</div>
 							</div>
 						</div>
 					</div>

@@ -28,6 +28,7 @@ import { ExploreAreaComponent } from './Component/explore-area/explore-area.comp
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './Component/signup/signup.component';
 import { LoginComponent } from './Component/login/login.component';
+import { SearchPipe } from './Core/search.pipe';
 
 
 
@@ -52,7 +53,8 @@ import { LoginComponent } from './Component/login/login.component';
     FilterToPoductComponent,
     ExploreAreaComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -12,8 +12,10 @@ export class FilteredComponent {
   searchKey:string="";
  // categeoies:any[]=[];
  public productList:any;
+ public product:any;
+
  public filterCategory:any;
- @Input() items= [];
+ @Input() items:any= [];
  @Input() term:string ='';
 
 

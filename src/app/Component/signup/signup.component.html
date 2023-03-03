@@ -1,0 +1,17 @@
+<div class="container">
+<div class="main">  	
+    <input type="checkbox" id="chk" aria-hidden="true">
+  
+      <div class="signup" class="form-group">
+        <form [formGroup]="registerform ">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="txt" placeholder="User name" required=""  formControlName="userName">
+          <input type="text" name="txt" placeholder="First name" required=""  formControlName="firstName">
+          <input type="text" name="txt" placeholder="Last name" required="" formControlName="lastName">
+          <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+          <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
+          <button type="button" value="submit" (click)="Submit()" >Sign up</button>
+        </form>
+      </div>
+      </div>
+    </div>

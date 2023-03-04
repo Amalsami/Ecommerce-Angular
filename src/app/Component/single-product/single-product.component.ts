@@ -20,13 +20,18 @@ export class SingleProductComponent {
     myService.GetProductByID(this.ID).subscribe(
       {
         next:(data)=>{
-          this.products=data;       
+          this.products=data;      
+          this.products.forEach((a:any)=>{
+            Object.assign(a,{quantity:1,total:a.price});
+          }); 
         },
         error:(err)=>{console.log(err)}
       }
     )
    }
-// addToCart(item:any){
-// this.cartservice.addToCart(item);
-// }
+ addToCart(item:any){
+   item.quantity=1;
+   item.total=item.price;
+   this.cartservice.addToCart(item);
+   }
 }

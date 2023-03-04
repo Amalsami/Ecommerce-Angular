@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CartService } from 'src/app/Core/Services/cart.service';
 
@@ -8,8 +9,8 @@ import { CartService } from 'src/app/Core/Services/cart.service';
 })
 export class CartComponent {
 public product:any=[]
-public grandTotal:number=0;
-constructor(private cartservice:CartService){}
+public grandTotal!:number;
+constructor(private cartservice:CartService,private http:HttpClient){}
 ngOnInit():void{
   this.cartservice.getProducts().subscribe(res=>{
     this.product=res; 
@@ -37,4 +38,52 @@ dec(item:any){
       this.removeItem(item);
     }
 }
+
+shopmore(product:any){
+  localStorage.setItem('session',JSON.stringify(product))
+}
+// checkout(product:any){
+
+//   let arr =[];
+//   try {
+//     for (const i of product) {
+//       arr.push({"productId": i.id , "productAmount":i.quantity})
+//   } 
+//   } catch (error) {
+//     console.log(error); 
+//   }
+//   let OrderData={
+//   "userId": "1",
+//   "paymentId": 2,
+//   "orderName": "hjkl",
+//   "products":arr
+//   }
+//   console.log(OrderData);
+// }
+url="http://httpbin.org/post";
+json:any;
+
+checkout(product:any){
+  let arr =[];
+  try {
+    for (const i of product) {
+      arr.push({"productId": i.id , "productAmount":i.quantity})
+  } 
+  } catch (error) {
+    console.log(error); 
+  }
+  let OrderData={
+  "userId": "1",
+  "paymentId": 2,
+  "orderName": "hjkl",
+  "products":arr
+  }
+this.http.post(this.url,OrderData).toPromise().then((data:any)=>{
+  console.log(data);
+  this.json=JSON.stringify(data.json)
+})
+this.emptyCart();
+}
+
+
 }

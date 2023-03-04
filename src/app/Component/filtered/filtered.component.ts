@@ -3,6 +3,7 @@ import { DemoService } from 'src/app/Core/Services/demo.service';
 import{CartService}from'src/app/Core/Services/cart.service'
 
 import {ActivatedRoute} from '@angular/router'
+import { __values } from 'tslib';
 @Component({
   selector: 'app-filtered',
   templateUrl: './filtered.component.html',
@@ -12,46 +13,98 @@ export class FilteredComponent {
   searchKey:string="";
  // categeoies:any[]=[];
  public productList:any;
+ public  categeoies:any[]=[];
+ 
  public filterCategory:any;
+ 
 
 
 
   constructor(private api:DemoService ,private CartService:CartService){
   }
   ngOnInit():void{
+    this.GetAllCategeries()
+    
 this.api.GetAllProduct().subscribe(res=>{
 this.productList=res;
-this.filterCategory=res;
+this. filterCategory=res;
 this.productList.forEach((a:any)=>{
-  if(a.category==="women's clothing"||a.category==="men's clothing"){
-    a.category="fashion"
-  }
+
   Object.assign(a,{quantity:1,total:a.price});
 });
     });
     this.CartService.search.subscribe((val:any)=>{
       this.searchKey=val;
     })
-
   }
- addToCart(item:any){
-   this.CartService.addToCart(item);
+  addToCart(item:any){
+    let data =localStorage.getItem('session')
+    this.CartService.addToCart(item);
+    console.log('local'+data); 
+  }
+  //try to save data in local storage to not repeate the cart again
+//  addToCart(item:any){
+//   let data =localStorage.getItem('session')
+//     if(data!=null){
+//       for (const i of data) {
+//         if(item==i){
+//           console.log(data);       
+//         }
+//         else{
+//           this.CartService.addToCart(item);
+//         }
+//       }
+//     }
+//    }
+  //  GetAllProduct(){
+  //   this.api.GetAllProduct().subscribe((res:any)=>{
+  //     console.log(res);
+  // this.productList=res
+  //   } ,error=>{
+  //     alert(error)
+  //   }
+      
+  //   )
+  //  }
+   
+  GetAllCategeries(){
+    this.api.GetAllCategeries().subscribe((res:any)=>{
+      console.log(res);
+  this.categeoies=res
+    } ,error=>{
+      alert(error)
+    }
+      
+    )
    }
+  filterCategeryes(event: any){
+  let value=event.target.value;
+  console.log(value)
+  this.GetproductCategeries(value)
+ 
+ }
 
-  filter(category:string){
-    this.filterCategory=this.productList.filter((a:any)=>{
-      if(a.category == category||category==''){
-        return a;
-      }
-    })
-  }
+ GetproductCategeries(keywored:string){
+  this.api.GetproductbyCategeries(keywored).subscribe((res:any)=>{
+this.productList=res
+  })
+}
+
+  // filter(category:string){
+  //   this.filterCategory=this.productList.filter((a:any)=>{
+  //     if(a.category == category||category==''){
+  //       return a;
+  //     }
+    // })
+
+  // }
   
   //products:any[]=[];
  // categegies:any;
   
  
   // ngOnChanges(): void {
- products:any;
+//  products:any;
   // }
   // item:any=""
   // menuitems:any[]=[]

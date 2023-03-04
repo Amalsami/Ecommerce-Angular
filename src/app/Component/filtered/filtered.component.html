@@ -1,4 +1,27 @@
+<!-- <div class="my-2 w-25">
+  <label for="" class="my-1">Categeriest:</label>
+  <select class="form-control" >
+    
+      <option value="all" selected>all</option>
+      <option value="{{option}}" *ngFor="let option of categeoies"routerLinkActive="active" routerLink="/" > 
+          
+          {{option}} </option>
+   
+  </select>
 
+  <div class="my-2 w-25">
+    <label for="" class="my-1">Categeriest:</label>
+    <button class="form-control" >
+      
+        <button value="all" selected>all</button>
+        <button value="{{option}}" *ngFor="let option of categeoies "routerLinkActive="active" routerLink="/ "> 
+            
+            {{option}} </button>
+     
+       
+    </button>
+</div>
+</div> -->
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
    
@@ -13,10 +36,6 @@
           <h1 class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.title}}</h1>
           <p class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{i.description}}</p>
           <p class="item-price"><b>{{i.price}}$</b></p>
- 
-          
-         
-          <!--  (click)="addItem(item)" -->
-        </div></a> <button (click)="addToCart(i)" type="button" class="btn btn-lg btn-outline-light"routerLinkActive="active" routerLink="/Cart">add to Cart</button>
+        </div></a> <button (click)="addToCart(i)" type="button" class="btn btn-lg btn-outline-light">add to Cart</button>
       </div> 
     </div>

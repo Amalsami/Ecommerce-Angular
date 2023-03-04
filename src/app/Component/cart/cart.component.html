@@ -8,7 +8,7 @@
           </div>
           <div class="col-md-3 mt-2">
             <p class="h4">{{item.name}}</p>
-            <p>Total Price: {{item.price * item.quantity}}$</p>
+            <p>Total Price: {{item.total}}$</p>
           </div>
           <div class="col-md-3 mt-5">
             <div class="amount m-3 ">
@@ -23,6 +23,7 @@
         </div>
         <button id="bb" class="btn btn-secondary text-white mt-5 m-5" (click)="emptyCart()">Clear Cart</button>
         <button id="bb" routerLinkActive="active" routerLink="/product" class="btn btn-secondary text-white mt-5 m-5">Shop More</button>
+        <button id="bb" class="btn btn-secondary text-white mt-5 m-5" (click)="checkout(product)">Check Out</button>
       </div>
     </div>
   </div>

@@ -60,7 +60,7 @@ shopmore(product:any){
 //   }
 //   console.log(OrderData);
 // }
-url="http://httpbin.org/post";
+url="https://localhost:7032/api/Products/AddProductsToShoppingOrder";
 json:any;
 
 checkout(product:any){
@@ -73,9 +73,9 @@ checkout(product:any){
     console.log(error); 
   }
   let OrderData={
-  "userId": "1",
-  "paymentId": 2,
-  "orderName": "hjkl",
+  "userId": "cb833913-fb85-4db2-9079-2a9219c9ce14",
+  "paymentId": 1,
+  "orderName": "hjklhjk",
   "products":arr
   }
 this.http.post(this.url,OrderData).toPromise().then((data:any)=>{

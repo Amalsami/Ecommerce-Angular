@@ -14,7 +14,7 @@
 					<div class="row" >
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i>=12&&i<16">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.photo}} class="img-responsive" alt="">
@@ -43,7 +43,7 @@
 					<div class="row">
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
 							<div class="thumb-wrapper"*ngIf="i>=16&&i<20">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
 									<img src={{m.photo}} class="img-responsive" alt="">

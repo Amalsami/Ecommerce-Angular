@@ -4,20 +4,21 @@
       <input [(ngModel)]="searchterm" type="text" placeholder="Search" class="form-control w-50 m-auto"/>
   </div>
   <div class=" w-25 d-flex justify-content-around m-auto my-5">
-    <!-- <select (change)="filterByCategory($event)">
-      <option *ngFor="let card of productList">{{card}}</option>
-    </select> -->
     <div class="">
-      <!-- <button class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" (click)="getAllEnglish()">All</button> -->
-      <button *ngFor="let chip of Chips"
-      class="btn btn-lg btn-outline-light" (click)="filterByCategory(chip)">
-          {{chip}}</button>
-  </div>
+      <button
+      class="btn btn-lg btn-outline-light">
+        all product </button>
+      <button
+      class="btn btn-lg btn-outline-light" (click)="filterByCategory(Chips[0])">
+        phones </button>
+      <button
+      class="btn btn-lg btn-outline-light" (click)="filterByCategory(Chips[1])">
+         accsesories</button>
       <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of productList" (click)="filterByCategory($event)">{{card}} </button> -->
       <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterCategory(card)">cat</button> -->
       <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">accsesories</button> -->
   </div>
 </div>
 <!---->
-<app-filtered class="mt-5"  [term]="searchterm" [items]="filtersearch" ></app-filtered>
+<app-filtered class="mt-5" [items]="filtersearch"  [term]="searchterm"></app-filtered>
 

@@ -12,7 +12,7 @@ public grandTotal:number=0;
 constructor(private cartservice:CartService){}
 ngOnInit():void{
   this.cartservice.getProducts().subscribe(res=>{
-    this.product=res; 
+    this.product=res;
     this.grandTotal=this.cartservice.getTotalPrice();
   })
 }

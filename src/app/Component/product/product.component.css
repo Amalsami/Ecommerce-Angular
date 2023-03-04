@@ -3,14 +3,13 @@
 }
 .btn{
   /* background-color: none !important; */
-  color: #344e74;
+  color: white;
+  background-color: #5b76a0;
   border: none !important;
-  font-size: larger;
+  font-size:13px;
   margin: 4px;
   margin-bottom: 15px;
-  border-radius: 5px;
-  width: 10rem;
-  height: 3rem;
+  border-radius: 10px;
 }
 /* .btn:hover{
   background-color:#505f74 !important;

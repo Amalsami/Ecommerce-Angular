@@ -26,6 +26,9 @@ import { BestSellerComponent } from './Component/best-seller/best-seller.compone
 import { FilterToPoductComponent } from './Component/filter-to-poduct/filter-to-poduct.component';
 import { ExploreAreaComponent } from './Component/explore-area/explore-area.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './Component/signup/signup.component';
+import { LoginComponent } from './Component/login/login.component';
+import { SearchPipe } from './Core/search.pipe';
 
 
 
@@ -49,6 +52,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BestSellerComponent,
     FilterToPoductComponent,
     ExploreAreaComponent,
+    SignupComponent,
+    LoginComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

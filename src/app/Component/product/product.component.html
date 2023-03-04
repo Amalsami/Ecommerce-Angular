@@ -1,19 +1,23 @@
 
 <div class="container">
   <div  class="row">
-      <input [(ngModel)]="searchterm" (keyup)="search($event)" type="text" placeholder="Search" class="form-control w-50 m-auto"/>
+      <input [(ngModel)]="searchterm" type="text" placeholder="Search" class="form-control w-50 m-auto"/>
   </div>
   <div class=" w-25 d-flex justify-content-around m-auto my-5">
-      <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">all products</button>
+    <!-- <select (change)="filterByCategory($event)">
+      <option *ngFor="let card of productList">{{card}}</option>
+    </select> -->
+    <div class="">
+      <!-- <button class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" (click)="getAllEnglish()">All</button> -->
+      <button *ngFor="let chip of Chips"
+      class="btn btn-lg btn-outline-light" (click)="filterByCategory(chip)">
+          {{chip}}</button>
   </div>
-  <!-- <div>
-      <app-menu-item class="mt-5" [items]="FilteriedMenu" [term]="term"
-      (addItem)="addItemToCart($event)"></app-menu-item>
-  </div> -->
+      <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of productList" (click)="filterByCategory($event)">{{card}} </button> -->
+      <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterCategory(card)">cat</button> -->
+      <!-- <button class="btn btn-lg btn-outline-light" *ngFor="let card of cards" (click)="filterByCategory(card)">accsesories</button> -->
+  </div>
 </div>
-<app-filtered></app-filtered>
-<!-- [searhed]="search" -->
-<!--   *ngFor="let chip of chips" (click)="filterByCategory(chip)" >{{chip}} -->
-<!-- <select class="form-select" aria-label="Default select example">
-  <option selected *ngFor="let t of menuitems" >{{t.name}}</option>
-</select> -->
+<!---->
+<app-filtered class="mt-5"  [term]="searchterm" [items]="filtersearch" ></app-filtered>
+

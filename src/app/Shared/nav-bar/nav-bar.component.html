@@ -1,15 +1,17 @@
-<div  class="nav" fxLayout="row" fxLayoutAlign="space-between center">
+<div class="nav" fxLayout="row" fxLayoutAlign="space-between center">
 
-    <div class="nn" ><img class="Logo" src="../../../assets/images/c6.png" /> </div>
-     <div  fxLayoutGap="25">
-      <a routerLinkActive="active" routerLink="/">Home</a>
-      <a  routerLinkActive="active" routerLink="/aboutus">AboutUs</a>
-      <a routerLinkActive="active" routerLink="/account">Account</a>
-      <a routerLinkActive="active" routerLink="/product">Product</a>
-      <button routerLinkActive="active" routerLink="/Cart" class="byn " style="background-color: black; color: white;">
-        <i style="font-size: 30px;"class="fas fa-cart-plus"></i>
-        <div style="font-size: 10px;color: black; background-color: white;"class="badge bg-danger">{{totalItem}}</div>
-        </button>
-     </div>
-      <div class="f"></div>
- </div>
+  <div class="nn"><img class="Logo" src="../../../assets/images/c6.png" /> </div>
+  <div fxLayoutGap="25">
+    <a routerLinkActive="active" routerLink="/">Home</a>
+    <a routerLinkActive="active" routerLink="/aboutus">About</a>
+    <a routerLinkActive="active" routerLink="/login">Login</a>
+    <a routerLinkActive="active" routerLink="/product">Shop</a>
+    <!-- <button  class=" " style="background-color: black; color: white;"> -->
+    <!-- <i style="font-size: 25px;"class="fas fa-cart-plus"></i> -->
+    <i routerLinkActive="active" routerLink="/Cart" style="font-size: 23px; color: beige;" class="fa fa-shopping-cart"
+      aria-hidden="true"></i>
+    <!-- <div style="font-size: 10px; background-color: white;"class="badge bg-dark">{{totalItem}}</div> -->
+    <!-- </button> -->
+  </div>
+  <div class="f"></div>
+</div>

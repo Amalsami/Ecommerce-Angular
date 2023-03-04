@@ -5,11 +5,16 @@ img{
    padding: 5px;
 }
 img:hover{
-    width: 150px;
-    height: 130px;
+    width: 110px;
     border: 2px rgba(236, 236, 242, 0.608) solid;
-    border-radius: 30px;
+
 }
 .row{
     margin-top: 25px;
+}
+.dd{
+  border-radius: 25%;
+}
+.dd:hover{
+  background-color: #415b80 !important;
 }

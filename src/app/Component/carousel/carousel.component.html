@@ -14,7 +14,7 @@
 				<div class="item active" >
 					<div class="row" >
 						<div class="col-sm-3" *ngFor="let m of products;let i=index">
-							<div class="thumb-wrapper"*ngIf="i<4">
+            <div class="thumb-wrapper"*ngIf="i<4">
 								<!-- <span class="wish-icon"><i class="fa fa-heart-o"></i></span> -->
 								<a class="link-primary"routerLinkActive="active"[routerLink]="['/singleProduct',m.id]">
 								<div class="img-box">
@@ -33,7 +33,7 @@
 										</ul>
 									</div>
 									<p class="item-price"><s>$400.00</s> <b>${{m.price}}</b></p>
-									<a href="#" class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
+									<a  class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
 								</div>
 							</div>
 						</div>
@@ -62,7 +62,7 @@
 											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
 										</ul>
 									</div>
-									<a href="#" class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
+									<a  class="btn btn-primary" (click)="addToCart(m)">Add to Cart</a>
 								</div>
 							</div>
 						</div>
@@ -90,7 +90,7 @@
 											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
 										</ul>
 									</div>
-									<a href="#" class="btn btn-primary" (click)="addToCart(m)" >Add to Cart</a>
+									<a class="btn btn-primary" (click)="addToCart(m)" >Add to Cart</a>
 								</div>
 							</div>
 						</div>

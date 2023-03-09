@@ -8,7 +8,7 @@
           </div>
           <div class="col-md-3 mt-2">
             <p class="h4">{{item.name}}</p>
-            <p>Total Price: {{item.price * item.quantity}}$</p>
+            <p>Total Price: {{item.total}}$</p>
           </div>
           <div class="col-md-3 mt-5">
             <div class="amount m-3 ">
@@ -22,63 +22,32 @@
           </div>
         </div>
         <button id="bb" class="btn btn-secondary text-white mt-5 m-5" (click)="emptyCart()">Clear Cart</button>
-        <button id="bb" routerLinkActive="active" routerLink="/product" class="btn btn-secondary text-white mt-5 m-5">Shop More</button>
+        <button id="bb" routerLinkActive="active" routerLink="/product"
+          class="btn btn-secondary text-white mt-5 m-5">Shop More</button>
+        <button id="bb" class="btn btn-secondary text-white mt-5 m-5" (click)="checkout(product)">Check Out</button>
       </div>
     </div>
-    <!-- <div class="card-table">
-<div class="cart-product">
-<table class="table table-responsive">
-<thead>
-    <tr>
-        <th>Sr.No</th>
-        <th>Product Name</th>
-        <th>Product Image</th>
-        <th>Discribtion</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-        <th>Action</th>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let item of product;let i=index">
-        <td>{{i+1}}</td>
-        <td>{{item.title}}</td>
-        <td><img style="width: 120px;"[height]="150" src="{{item.image}}"></td>
-        <td>{{item.description}}</td>
-        <td>{{item.price}}</td>
-        <td >
-            <div class="column">
-            <button class="button"(click)="inc(item)">+</button>
-          {{item.quantity}}
-          <button class="button"(click)="dec(item)">-</button>
-        </div>
-        </td>
-        <td>{{item.total}}</td>
-        <td>
-            <button style="background-color: 1C3879;"(click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4"></td>
-        <td><button class="btn"style="background-color: #1C3879;color:white"(click)="emptyCart()">Empty Cart</button></td>
-        <td><button routerLinkActive="active" routerLink="/product"class="btn"style="background-color: #607EAA;color:white">Shop More</button></td>
-    </tr>
-</tbody>
-</table>
-</div>
-</div> -->
   </div>
 </ng-container>
 <ng-container *ngIf="product.length==0">
-  <div class="container">
-    <div class="card">
-      <!-- <h5 class="card-title">My Cart</h5> -->
-    </div>
-    <div class="center">
-      <img src="../../../assets/images/cart_empty.png" [height]="240" [width]="350" alt="">
-      <h2>Cart is empty!</h2>
-      <button routerLinkActive="active" routerLink="/product" class="btn btn-primary">Shop Now</button>
+  <div class="container-fluid  mt-10">
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header">
+          </div>
+          <div class="card-body cart">
+            <div class="col-sm-12 empty-cart-cls text-center">
+              <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+              <h3><strong> Cart is Empty!</strong></h3>
+              <h4>Add item to it now :)</h4>
+              <button class="button1" routerLinkActive="active" routerLink="/product">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </ng-container>

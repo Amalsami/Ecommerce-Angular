@@ -13,7 +13,7 @@ export class DemoService {
   private URL_DB2 ="https://localhost:7032/Product/Category";
   private URL_DB3 ="https://localhost:7032/Product/Category";
   private URL_DB4 = "https://localhost:7032/api/Products";
-
+  private URL_DB5="https://localhost:7032/api/Products/GetProductWithOffers"
   constructor(private myClient:HttpClient) { }
   GetAllProduct():Observable<any>{
 
@@ -33,5 +33,7 @@ export class DemoService {
   GetproductbyCategeries(id:any):Observable<any>{
     return this.myClient.get("https://localhost:7032/Product/Category?id="+id);
   }
-
+  GetProductWithOffers(){
+    return this.myClient.get("https://localhost:7032/api/Products/GetProductWithOffers");
+  }
 }

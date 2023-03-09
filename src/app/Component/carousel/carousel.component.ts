@@ -12,7 +12,7 @@ export class CarouselComponent {
 
   constructor(private myService:DemoService,private cartservice:CartService){}
   ngOnInit():void{
-    this.myService.GetAllProduct()
+    this.myService.GetProductWithOffers()
     .subscribe(res=>{
       this.products=res;
       this.products.forEach((a:any)=>{

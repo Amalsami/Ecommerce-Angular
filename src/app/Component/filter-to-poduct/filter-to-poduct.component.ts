@@ -43,7 +43,7 @@ public filterCategory:any;
  
 this.api.GetAllProduct().subscribe(res=>{
 this.productList=res;
-this.filterCategory=res;
+this.categeoies=res;
 this.productList.forEach((a:any)=>{
  if(a.category==="women's clothing"||a.category==="men's clothing"){
    a.category="fashion"
@@ -72,16 +72,16 @@ this.productList.forEach((a:any)=>{
 //    this.GetAllCategeries()
 //   //this.GetAllProduct()
 //  }
- GetAllProduct(){
-  this.api.GetAllProduct().subscribe((res:any)=>{
-    console.log(res);
-this.protected=res
-  } ,error=>{
-    alert(error)
-  }
+//  GetAllProduct(){
+//   this.api.GetAllProduct().subscribe((res:any)=>{
+//     console.log(res);
+// this.protected=res
+//   } ,error=>{
+//     alert(error)
+//   }
     
-  )
- }
+//   )
+//  }
  
  GetAllCategeries(){
   this.api.GetAllCategeries().subscribe((res:any)=>{
@@ -92,7 +92,7 @@ this.categeoies=res
   }
     
   )
-//  }
+  // }
 //  filterCategeryes(event: any){
 //   let value=event.target.value;
 //   console.log(value)

@@ -1,7 +1,6 @@
 <!-- <div class="card   mb-3" style="max-width: 80rem; text-align: center; margin: auto; margin-top:3%; background-color: rgb(255, 255, 255);">
     <div class="card-header">{{products.category}}</div>
     <div class="card-body">
-
       <img src={{products.image}} class="bd-placeholder-img card-img-top" width="60%" height="300" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="card-body">
         <h1 class="card-title">{{products.title}}</h1>
@@ -58,7 +57,7 @@
         <div class="single-product-details mt-5 mt-lg-0">
           <h2>{{products.name}}</h2>
           <div class="sku_wrapper mb-4">
-            brand : <span class="text-muted">{{products.brandId}}</span>
+            brand : <span class="text-muted">{{products.name}}</span>
           </div>
 
           <p class="product-description my-4 ">
@@ -69,8 +68,8 @@
           <form class="cart" action="#" method="post">
             <div class="quantity d-flex align-items-center">
               <!-- <input type="number" id="#" class="input-text qty text form-control w-25 mr-3" step="1" min="1" max="9" name="quantity" value="1" title="Qty" size="4" > -->
-              <a href="#" class="btn btn-main btn-small" style="background-color: #5b76a0; width: 150px;"
-                class="btn btn-lg btn-outline-light" routerLinkActive="active" routerLink="/Cart">Add to cart</a>
+              <button class="btn btn-main btn-small" style="background-color: #5b76a0; width: 150px;"
+                class="btn btn-lg btn-outline-light" (click)="addToCart(products)">Add to cart</button>
             </div>
           </form>
 

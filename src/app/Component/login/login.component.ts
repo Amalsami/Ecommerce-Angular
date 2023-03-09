@@ -10,6 +10,7 @@ import { LoginService } from 'src/app/Core/Services/login.service';
 })
 export class LoginComponent implements OnInit{
   loginform: FormGroup | any;
+
   // email:any;
   // password:any;
 logindto:any={ email: "", password: ""};
@@ -19,19 +20,24 @@ logindto:any={ email: "", password: ""};
   constructor( private router:Router,
     private formBuilder: FormBuilder,
     // private authService: AuthService,
-    private loginService: LoginService){}
+    private loginService: LoginService){
+      this.loginform = this.formBuilder.group({
+        email: ['', Validators.required],
+        password: ['', Validators.required],
+})
+    }
   ngOnInit(): void {
     this.loginform = this.formBuilder.group({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
     });
 
-    this.loginService.getUser(this.email.value).subscribe(
-      (data) => {
-        this.logindto = data;
-        console.log(this.logindto)
-      }
-    );
+    // this.loginService.getUser(this.email.value).subscribe(
+    //   (data) => {
+    //     this.logindto = data;
+    //     console.log(this.logindto)
+    //   }
+    // );
   }
 
 // loginform =new FormGroup({
@@ -53,7 +59,9 @@ goToSignup(){
 Submit(){
   this.logindto.password = this.password.value,
   this.logindto.email = this.email.value,
+
   console.log(this.logindto.value);
+  this.router.navigate(["/account"])
 //   let user={
 
 

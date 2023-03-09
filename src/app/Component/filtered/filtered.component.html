@@ -1,7 +1,8 @@
 <div class="container">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
 
-    <div class="col" *ngFor="let i of items|search:term">
+    <div class="col" *ngFor="let i of items|search:term ">
+      <!-- -->
       <div class="card shadow">
         <a class="link-primary" routerLinkActive="active" [routerLink]="['/singleProduct',i.id]">
           <img src={{i.photo}} class="bd-placeholder-img card-img-top " width="100%" height="225" role="img"
@@ -17,6 +18,6 @@
             <!--  (click)="addItem(item)" -->
           </div>
         </a>
-        <button (click)="addToCart(i)" type="button" class="row ms-5 btn btn-lg btn-outline-light m-2">add to Cart</button>
+        <!-- <button (click)="addToCart(i)" type="button" class="row ms-5 btn btn-lg btn-outline-light m-2">add to Cart</button> -->
       </div>
     </div>

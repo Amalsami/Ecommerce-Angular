@@ -13,14 +13,12 @@ import { filter } from 'rxjs/operators'
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  searchKey:string="";
- categeoies:any[]=[];
- public productList:any;
- public product:any[]=[];
+  // searchKey:string="";
+//  categeoies:any[]=[];
+//  public productList:any;
+//  public product:any[]=[];
  searchterm:string='';
  filtersearch:any=[];
- select: string = '';//search
- cards:any[]=["all"]//button
 
  public filterCategory:any;
   constructor(private api:DemoService ,private CartService:CartService){
